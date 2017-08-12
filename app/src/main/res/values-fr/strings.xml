@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Mon Poids Idéal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_history">Record</string>
+    <string name="action_settings">Paramèters</string>
+    <string name="action_about">A propos de</string>
+
+    <string name="application_options">Options d\'application</string>
+    <string name="developer_email">zovalle@gmail.com</string>
+    <string name="my_current_values">Mes valeurs actuelles</string>
+    <string name="input_age">âge</string>
+    <string name="input_height">taille</string>
+    <string name="input_weight">poids</string>
+    <string name="input_male">Homme</string>
+    <string name="input_female">Femme</string>
+    <string name="input_get_results">Obtenir des Résultats</string>
+    <string name="validator_is_required">est requis.</string>
+    <string name="validator_positive_value">devrait être supérieur à zéro.</string>
+    <string name="label_my_current_data">Mes données actuelles</string>
+    <string name="unit_kilogram">Kilogramme</string>
+    <string name="unit_pound">Livre</string>
+    <string name="unit_meter">Mètre</string>
+    <string name="unit_feet">Feet</string>
+    <string name="unit_centimeter">Centimètre</string>
+    <string name="validator_gender">Vous devez spécifier votre genre.</string>
+    <string name="app_child_about">Sur</string>
+    <string name="app_child_results">Résultats</string>
+    <string name="app_child_settings">Paramèters</string>
+    <string name="app_child_history">Record</string>
+    <string name="label_result">Résultat</string>
+    <string name="label_method">Méthode</string>
+    <string name="label_share_message">Partager mes résultats avec</string>
+    <string name="label_imc_level_1">Dénutrition ou anorexie</string>
+    <string name="label_imc_level_4">Corpulence normale</string>
+    <string name="label_imc_level_3">Maigreur</string>
+    <string name="label_imc_level_5">Surpoids</string>
+    <string name="label_imc_level_6">Obésité modérée</string>
+    <string name="label_imc_level_7">Obésité sévère</string>
+    <string name="label_imc_level_8">Obésité morbide ou massive</string>
+    <string name="label_imc_level_2">Maigreur modérée</string>
+    <string name="label_value">Valeur</string>
+    <string name="label_imc_method">Indice de masse corporel</string>
+    <string name="label_share_subject">Regarde mon poids idéal</string>
+    <string name="label_pref_save_queries">Stocker des résultats dans la base de données</string>
+    <string name="pref_store_results_in_db">Stocker des résultats dans la base de données</string>
+    <string name="pref_storage">Stockage</string>
+    <string name="pref_language">Langue</string>
+    <string name="pref_app_language">Langue du logiciel</string>
+</resources>

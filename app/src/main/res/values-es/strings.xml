@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Mi Peso Ideal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_history">Historial</string>
+    <string name="action_settings">Configuración</string>
+    <string name="action_about">Acerca</string>
+
+    <string name="application_options">Opciones de la Aplicación</string>
+    <string name="developer_email">zovalle@gmail.com</string>
+    <string name="my_current_values">Mis valores actuales</string>
+    <string name="input_age">edad</string>
+    <string name="input_height">altura</string>
+    <string name="input_weight">peso</string>
+    <string name="input_male">Hombre</string>
+    <string name="input_female">Mujer</string>
+    <string name="input_get_results">Obtener Resultados</string>
+    <string name="validator_is_required">es requerido.</string>
+    <string name="validator_positive_value">debe ser mayor que cero.</string>
+    <string name="label_my_current_data">Mis Datos Actuales</string>
+    <string name="unit_kilogram">Kilogramo</string>
+    <string name="unit_pound">Libra</string>
+    <string name="unit_meter">Metro</string>
+    <string name="unit_feet">Pies</string>
+    <string name="unit_centimeter">Centimetro</string>
+    <string name="validator_gender">Debe especificar su sexo.</string>
+    <string name="app_child_about">Acerca</string>
+    <string name="app_child_results">Resultados</string>
+    <string name="app_child_settings">Configuración</string>
+    <string name="app_child_history">Historial</string>
+    <string name="label_result">Resultado</string>
+    <string name="label_method">Método</string>
+    <string name="label_share_message">Compartir mis resultados con</string>
+    <string name="label_imc_level_1">Delgadez severa</string>
+    <string name="label_imc_level_2">Delgadez moderada</string>
+    <string name="label_imc_level_3">Delgadez leve</string>
+    <string name="label_imc_level_4">Normal (peso saludable)</string>
+    <string name="label_imc_level_5">Preobeso</string>
+    <string name="label_imc_level_6">Obesidad leve</string>
+    <string name="label_imc_level_7">Obesidad media</string>
+    <string name="label_imc_level_8">Obesidad mórbida</string>
+    <string name="label_value">Valor</string>
+    <string name="label_imc_method">Indice de Masa Corporal</string>
+    <string name="label_share_subject">Mira mi peso ideal</string>
+    <string name="label_pref_save_queries">Almacenar resultados en la base de datos</string>
+    <string name="pref_store_results_in_db">Almacenar resultados en la base de datos</string>
+    <string name="pref_storage">Almacenamiento</string>
+    <string name="pref_language">Idioma</string>
+    <string name="pref_app_language">Idioma de la aplicación</string>
+</resources>

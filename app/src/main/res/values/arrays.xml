@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="imc_level">
+        <item>@string/label_imc_level_1</item>
+        <item>@string/label_imc_level_2</item>
+        <item>@string/label_imc_level_3</item>
+        <item>@string/label_imc_level_4</item>
+        <item>@string/label_imc_level_5</item>
+        <item>@string/label_imc_level_6</item>
+        <item>@string/label_imc_level_7</item>
+        <item>@string/label_imc_level_8</item>
+    </integer-array>
+</resources>
