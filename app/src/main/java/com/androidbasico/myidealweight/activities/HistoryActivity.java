@@ -5,15 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.androidbasico.myidealweight.R;
 import com.androidbasico.myidealweight.data.DatabaseHandler;
 import com.androidbasico.myidealweight.models.RecordEntry;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryActivity extends AppCompatActivity {
     private ListView listView;
+    //private List<TextView> textViewArray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +28,12 @@ public class HistoryActivity extends AppCompatActivity {
         DatabaseHandler dbHandler = new DatabaseHandler(this);
         List<RecordEntry> entries = dbHandler.getAllEntries();
 
+       // TextView myTextView;
+        //textViewArray = new ArrayList<>();
+
+
         listView = (ListView) findViewById(R.id.list_view_history);
-        ArrayAdapter<RecordEntry> adapter = new ArrayAdapter<>(this, R.layout.activity_history, entries);
+        ArrayAdapter<RecordEntry> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_activated_1, entries);
         listView.setAdapter(adapter);
     }
 }

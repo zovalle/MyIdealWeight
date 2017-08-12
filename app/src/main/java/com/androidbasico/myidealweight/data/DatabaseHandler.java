@@ -44,8 +44,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-        /* We can create a script or a list of sentences for data migration
-        *  but for this implementation we will not consider any app upgrade */
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(sqLiteDatabase);
     }
@@ -78,7 +76,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             do {
                 record = (new RecordEntry.RecordEntryBuilder()).setDate(cursor.getString(cursor.getColumnIndex(DatabaseHandler.DATE)))
                         .setHeight(cursor.getDouble(cursor.getColumnIndex(DatabaseHandler.HEIGHT)))
-                        .setWeightUnit(cursor.getString(cursor.getColumnIndex(DatabaseHandler.HEIGHT_UNIT)))
+                        .setHeightUnit(cursor.getString(cursor.getColumnIndex(DatabaseHandler.HEIGHT_UNIT)))
                         .setWeight(cursor.getInt(cursor.getColumnIndex(DatabaseHandler.WEIGHT)))
                         .setWeightUnit(cursor.getString(cursor.getColumnIndex(DatabaseHandler.WEIGHT_UNIT)))
                         .setAge(cursor.getInt(cursor.getColumnIndex(DatabaseHandler.AGE)))
@@ -89,6 +87,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
+        cursor.close();
         db.close();
 
         return entries;
