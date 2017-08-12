@@ -49,4 +49,6 @@
     <string name="pref_storage">Almacenamiento</string>
     <string name="pref_language">Idioma</string>
     <string name="pref_app_language">Idioma de la aplicación</string>
+    <string name="label_about">Calcule su peso ideal basado en la altura, el peso, la edad y el sexo usando diferentes métodos.</string>
+    <string name="label_authtor">Autor: Zobiesky Ovalle</string>
 </resources>

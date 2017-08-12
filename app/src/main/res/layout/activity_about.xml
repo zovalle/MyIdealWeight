@@ -11,7 +11,16 @@
     tools:context="com.androidbasico.myidealweight.activities.AboutActivity">
 
     <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/label_about"
+    android:textSize="18dp"
+    android:textColor="@color/colorPrimaryDark"/>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About Activity"/>
+        android:text="@string/label_authtor"
+        android:paddingTop="30dp"
+        android:textSize="18dp"
+        android:textColor="@color/colorAccent"/>
 </LinearLayout>
