@@ -36,14 +36,6 @@
                 android:value=".activities.MainActivity" />
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
-            android:label="@string/app_child_settings"
-            android:parentActivityName=".activities.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.MainActivity" />
-        </activity>
-        <activity
             android:name=".activities.HistoryActivity"
             android:label="@string/app_child_history"
             android:parentActivityName=".activities.MainActivity">
@@ -51,7 +43,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
-        <activity android:name=".activities.ParamActivity"></activity>
     </application>
 
 </manifest>
