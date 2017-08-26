@@ -51,4 +51,12 @@
     <string name="pref_app_language">Idioma de la aplicación</string>
     <string name="label_about">Calcule su peso ideal basado en la altura, el peso, la edad y el sexo usando diferentes métodos.</string>
     <string name="label_authtor">Autor: Zobiesky Ovalle</string>
+    <string name="input_height_feet">pies</string>
+    <string name="input_height_inches">pulgadas</string>
+    <string name="title_activity_settings">Configuración</string>
+    <string name="err_out_of_range_age">¿Está seguro que esta es su edad?</string>
+    <string name="err_out_of_range_height">¿Está seguro que esta es su altura?</string>
+    <string name="err_out_of_range_weight">¿Está seguro que este es su peso?</string>
+    <string name="err_out_of_range_inches">Este es un valor invalido para pulgadas (1 - 12)</string>
+    <string name="err_empty_field">Error: campo vacío</string>
 </resources>

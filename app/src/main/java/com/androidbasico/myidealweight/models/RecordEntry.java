@@ -5,12 +5,10 @@ import com.androidbasico.myidealweight.R;
 import com.androidbasico.myidealweight.activities.MainActivity;
 import java.io.Serializable;
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class RecordEntry implements Serializable {
     private String date;
-    private double height;
+    private Height height;
     private String heightUnit;
     private int weight;
     private String weightUnit;
@@ -32,6 +30,7 @@ public class RecordEntry implements Serializable {
     private final double FEET_IN_ONE_METER = 3.28084;
 
     private RecordEntry(RecordEntryBuilder builder) {
+        date = builder.date;
         height = builder.height;
         heightUnit = builder.heightUnit;
         weight = builder.weight;
@@ -47,9 +46,7 @@ public class RecordEntry implements Serializable {
         return date;
     }
 
-    public double getHeight() {
-        return height;
-    }
+    public Height getHeight() { return height; }
 
     public String getHeightUnit() {
         return heightUnit;
@@ -99,9 +96,10 @@ public class RecordEntry implements Serializable {
         Resources res = MainActivity.getContext().getResources();
         DecimalFormat df = new DecimalFormat("###.##");
 
-        String text = res.getString(R.string.label_my_current_data) + "\n"
+        String text =  res.getString(R.string.label_my_current_data) + " : " + date + "\n"
                 + res.getString(R.string.input_age) + ": " + age + " (" + gender + ")\n"
-                + res.getString(R.string.input_height) + ": " + height + " " + heightUnit + "\n"
+                + res.getString(R.string.input_height) + ": "
+                + ((!heightUnit.equals(res.getString(R.string.unit_feet))) ? height.getFlatValue() + " " + heightUnit : height.getFeet() + "' " + height.getInches() + "\"") + "\n"
                 + res.getString(R.string.input_weight) + ": " + weight + " " + weightUnit + "\n\n"
                 + res.getString(R.string.label_result) + "\n"
                 + "Lorentz: " + df.format(lorentzMethod) + "\n"
@@ -123,11 +121,11 @@ public class RecordEntry implements Serializable {
         }
 
         if (heightUnit.equals(res.getString(R.string.unit_centimeter))) {
-            convertedHeight = (int) height;
+            convertedHeight = (int) height.getFlatValue();
         } else if (heightUnit.equals(res.getString(R.string.unit_meter))) {
-            convertedHeight = (int) (height * CENTIMETERS_IN_ONE_METER);
+            convertedHeight = (int) (height.getFlatValue() * CENTIMETERS_IN_ONE_METER);
         } else if (heightUnit.equals(res.getString(R.string.unit_feet))) {
-            convertedHeight = (int) (height / FEET_IN_ONE_METER * CENTIMETERS_IN_ONE_METER);
+            convertedHeight = (int) ((height.getFeet() + height.getInches() / 12.0) / FEET_IN_ONE_METER * CENTIMETERS_IN_ONE_METER);
         }
     }
 
@@ -151,7 +149,7 @@ public class RecordEntry implements Serializable {
 
     public static class RecordEntryBuilder {
         private String date;
-        private double height;
+        private Height height;
         private String heightUnit;
         private int weight;
         private String weightUnit;
@@ -166,7 +164,8 @@ public class RecordEntry implements Serializable {
             this.date = date;
             return this;
         }
-        public RecordEntryBuilder setHeight(double height) {
+
+        public RecordEntryBuilder setHeight(Height height) {
             this.height = height;
             return this;
         }

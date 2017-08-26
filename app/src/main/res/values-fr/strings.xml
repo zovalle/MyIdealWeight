@@ -23,7 +23,7 @@
     <string name="unit_kilogram">Kilogramme</string>
     <string name="unit_pound">Livre</string>
     <string name="unit_meter">Mètre</string>
-    <string name="unit_feet">Feet</string>
+    <string name="unit_feet">Pieds</string>
     <string name="unit_centimeter">Centimètre</string>
     <string name="validator_gender">Vous devez spécifier votre genre.</string>
     <string name="app_child_about">Sur</string>
@@ -51,4 +51,12 @@
     <string name="pref_app_language">Langue du logiciel</string>
     <string name="label_about">Calculez votre poids idéal en fonction de la taille, du poids, de l\'âge et du sexe en utilisant différentes méthodes.</string>
     <string name="label_authtor">Auteur: Zobiesky OVALLE</string>
+    <string name="input_height_inches">pouces</string>
+    <string name="input_height_feet">pieds</string>
+    <string name="title_activity_settings">Paramètres</string>
+    <string name="err_out_of_range_age">Êtes-vous sûr que c\'est votre âge?</string>
+    <string name="err_out_of_range_height">Êtes-vous sûr que c\'est votre taille?</string>
+    <string name="err_out_of_range_weight">Êtes-vous sûr que c\'est votre poids?</string>
+    <string name="err_out_of_range_inches">Numéro invalide pour les pouces (1 - 12).</string>
+    <string name="err_empty_field">Erreur: Entrée vide</string>
 </resources>
