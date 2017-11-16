@@ -10,4 +10,15 @@
         <item>@string/label_imc_level_7</item>
         <item>@string/label_imc_level_8</item>
     </integer-array>
+
+    <integer-array name="imc_icons">
+        <item>@drawable/ic_imc_result_1</item>
+        <item>@drawable/ic_imc_result_2</item>
+        <item>@drawable/ic_imc_result_3</item>
+        <item>@drawable/ic_imc_result_4</item>
+        <item>@drawable/ic_imc_result_5</item>
+        <item>@drawable/ic_imc_result_6</item>
+        <item>@drawable/ic_imc_result_7</item>
+        <item>@drawable/ic_imc_result_8</item>
+    </integer-array>
 </resources>

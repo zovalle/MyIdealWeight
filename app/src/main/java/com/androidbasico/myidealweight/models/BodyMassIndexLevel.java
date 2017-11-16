@@ -4,11 +4,13 @@ public class BodyMassIndexLevel {
     private double downLimit;
     private double upLimit;
     private int resourceId;
+    private int iconId;
 
-    public BodyMassIndexLevel(double downLimit, double upLimit, int resourceId) {
+    public BodyMassIndexLevel(double downLimit, double upLimit, int resourceId, int iconId) {
         this.downLimit = downLimit;
         this.upLimit = upLimit;
         this.resourceId = resourceId;
+        this.iconId = iconId;
     }
 
     public double getDownLimit() {
@@ -22,4 +24,6 @@ public class BodyMassIndexLevel {
     public int getResourceId() {
         return resourceId;
     }
+
+    public int getIconId() { return iconId; }
 }

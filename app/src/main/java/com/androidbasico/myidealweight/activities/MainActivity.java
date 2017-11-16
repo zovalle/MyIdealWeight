@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity
 
         switch (id) {
             case R.id.nav_history:
-                intent = new Intent(this, HistoryActivity.class);
+                intent = new Intent(this, ReportActivity.class);
                 break;
             case R.id.nav_settings:
                 //intent = new Intent(this, SettingsActivity.class);

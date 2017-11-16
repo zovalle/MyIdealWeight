@@ -1,6 +1,8 @@
 package com.androidbasico.myidealweight.models;
 
 import android.content.res.Resources;
+import android.content.res.TypedArray;
+
 import com.androidbasico.myidealweight.R;
 import com.androidbasico.myidealweight.activities.MainActivity;
 import java.io.Serializable;
@@ -24,6 +26,9 @@ public class RecordEntry implements Serializable {
     private double lorentzMethod;
     private double perraultMethod;
     private double wanDerVaelMethod;
+
+    private String IMCDescriptionResult;
+    private int IMCImageIdResult;
 
     private final double POUNDS_IN_ONE_KILOGRAM = 2.20462;
     private final double CENTIMETERS_IN_ONE_METER = 100;
@@ -92,6 +97,14 @@ public class RecordEntry implements Serializable {
         return wanDerVaelMethod;
     }
 
+    public String getIMCDescriptionResult() {
+        return IMCDescriptionResult;
+    }
+
+    public int getIMCImageIdResult() {
+        return IMCImageIdResult;
+    }
+
     public String toString() {
         Resources res = MainActivity.getContext().getResources();
         DecimalFormat df = new DecimalFormat("###.##");
@@ -144,6 +157,30 @@ public class RecordEntry implements Serializable {
             lorentzMethod *= POUNDS_IN_ONE_KILOGRAM;
             perraultMethod *= POUNDS_IN_ONE_KILOGRAM;
             wanDerVaelMethod *= POUNDS_IN_ONE_KILOGRAM;
+        }
+
+        TypedArray integerArray = res.obtainTypedArray(R.array.imc_level);
+        int[] imcLevels = new int[integerArray.length()];
+
+        TypedArray integerIconArray = res.obtainTypedArray(R.array.imc_icons);
+        int[] imcIconLevels = new int[integerIconArray.length()];
+
+        for (int index = 0; index < integerArray.length(); index++) {
+            imcLevels[index] = integerArray.getResourceId(index, 0);
+        }
+
+        for (int index = 0; index < integerIconArray.length(); index++) {
+            imcIconLevels[index] = integerIconArray.getResourceId(index, 0);
+        }
+
+        BodyMassIndexTable table = BodyMassIndexTable.getInstance();
+
+        for (BodyMassIndexLevel level : table.getTable()) {
+            if (IMCMethod >= level.getDownLimit() && IMCMethod < level.getUpLimit()) {
+                IMCDescriptionResult = res.getString(imcLevels[level.getResourceId()]);
+                IMCImageIdResult = imcIconLevels[level.getIconId()];
+                break;
+            }
         }
     }
 

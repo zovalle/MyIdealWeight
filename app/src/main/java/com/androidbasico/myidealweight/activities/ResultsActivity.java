@@ -52,22 +52,7 @@ public class ResultsActivity extends AppCompatActivity {
         tvIdealWeightMetlife.setText(df.format(entry.getMetLifeMethod()));
         tvIdealWeightPerrault.setText(df.format(entry.getPerraultMethod()));
         tvIdealWeightWandervael.setText(df.format(entry.getWanDerVaelMethod()));
-
-        TypedArray integerArray = getResources().obtainTypedArray(R.array.imc_level);
-        int[] imcLevels = new int[integerArray.length()];
-
-        for (int index = 0; index < integerArray.length(); index++) {
-            imcLevels[index] = integerArray.getResourceId(index, 0);
-        }
-
-        BodyMassIndexTable table = BodyMassIndexTable.getInstance();
-
-        for (BodyMassIndexLevel level : table.getTable()) {
-            if (entry.getIMCMethod() >= level.getDownLimit() && entry.getIMCMethod() < level.getUpLimit()) {
-                tvIdealWeightIMC.setText(df.format(entry.getIMCMethod()) + "  " + getResources().getString(imcLevels[level.getResourceId()]));
-                break;
-            }
-        }
+        tvIdealWeightIMC.setText(df.format(entry.getIMCMethod()) + "  " + entry.getIMCDescriptionResult());
     }
 
     @Override
